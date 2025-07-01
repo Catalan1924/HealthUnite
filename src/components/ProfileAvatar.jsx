@@ -16,7 +16,7 @@ const ProfileAvatar = ({ user }) => {
 
     setUploading(true);
 
-    const storageRef = ref(storage, `avatars/${user.uid}`);
+    const storageRef = ref(storage, `${user.uid}/${file.name}`);
     await uploadBytes(storageRef, file);
     const downloadURL = await getDownloadURL(storageRef);
 
@@ -25,14 +25,14 @@ const ProfileAvatar = ({ user }) => {
     });
 
     setImageURL(downloadURL);
-    setUploading(false);
+    setUploading(true);
   };
 
   return (
     <div className="text-center space-y-3">
       <img
         src={imageURL || "https://via.placeholder.com/150"}
-        alt="avatar"
+        alt="Profile" 
         className="w-32 h-32 object-cover rounded-full mx-auto border"
       />
       <div>

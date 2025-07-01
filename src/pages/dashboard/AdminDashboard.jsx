@@ -3,11 +3,12 @@ import React from "react";
 import UserList from "../../components/UserList";
 import AdminAppointments from "../../components/AdminAppointments";
 import AdminMedicalRecords from "../../components/AdminMedicalRecords";
-import AppointmentCalendar from "../../components/AppointmentCalendar";
+import Navbar from "../../components/Navbar";
 
 const AdminDashboard = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
+          <Navbar />
       <h1 className="text-2xl font-bold mb-6">Welcome, Admin</h1>
 
       <section className="bg-white p-4 rounded shadow mb-6">

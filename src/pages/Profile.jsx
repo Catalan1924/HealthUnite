@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase/config";
-import ProfileAvatar from "../components/ProfileAvatar";
+
 
 const Profile = () => {
   const { currentUser } = useAuth();
@@ -27,7 +27,7 @@ const Profile = () => {
         <h1 className="text-2xl font-bold mb-4 text-center">Your Profile</h1>
         <ProfileAvatar user={{ ...currentUser, photoURL: userData.photoURL }} />
 
-        <div className="mt-6 space-y-2">
+        <div className="mt-6 space-y-2 align-center">
           <p><strong>Email:</strong> {userData.email}</p>
           <p><strong>Role:</strong> {userData.role}</p>
           {userData.assignedDoctor && <p><strong>Assigned Doctor:</strong> {userData.assignedDoctor}</p>}

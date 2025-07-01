@@ -8,11 +8,13 @@ const Home = () => {
     navigate("/register");
   };
 
-  return (
+return (
+  <>
+   
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-100 to-blue-300 text-gray-800 p-8">
       <h1 className="text-4xl font-bold mb-4">Welcome to HealthUnite</h1>
       <p className="text-lg mb-8 text-center max-w-md">
-        Your trusted healthcare appointment and medical record management system.
+        Your trusted healthcare appointment and medical partner.
       </p>
 
       <button
@@ -22,7 +24,8 @@ const Home = () => {
         Get Started
       </button>
     </div>
-  );
+  </>
+);
 };
 
 export default Home;
