@@ -8,13 +8,11 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50 ">
+      <div className="max-w-10xl mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold text-blue-600">HealthUnite</Link>
         <div className="hidden md:flex gap-6">
           <Link to="/" className="text-gray-700 hover:text-blue-600">Home</Link>
-          <Link to="/medicalhistory" className="text-gray-700 hover:text-blue-600">MedicalHistory</Link>
-          <Link to="/appointmentlist" className="text-gray-700 hover:text-blue-600">AppointmentList</Link>
           <Link to="/login" className="text-white bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">Logout</Link>
         </div>
         <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>

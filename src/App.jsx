@@ -8,39 +8,46 @@ import PatientDashboard from './pages/dashboard/PatientDashboard';
 import DoctorDashboard from './pages/dashboard/DoctorDashboard';
 import AdminDashboard from './pages/dashboard/AdminDashboard';
 import Profile from './pages/Profile';
-import GridDistortion from "./Bits/GridDistortion";
-import Image from "./TopDoc_Main.jpg"; 
+import GridDistortion from './Bits/GridDistortion';
+import Image from './assets/TopDoc_Main.jpg';
+
 function App() {
   return (
-      <div className="relative min-h-screen">
-    
-    <div className="absolute top-0 left-0 w-full h-full z-0">
-      <GridDistortion
-        imageSrc={Image}
-        grid={10}
-        mouse={0.1}
-        strength={0.15}
-        relaxation={0.9}
-        className="custom-class"
-      />
-    </div>
+    <div className="relative min-h-screen overflow-hidden">
+     
+      {/* 👇 Fullscreen GridDistortion Background */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <GridDistortion
+          imageSrc={Image}
+          grid={10}
+          mouse={0.1}
+          strength={0.15}
+          relaxation={0.9}
+          className="pointer-events-none" // prevents mouse interaction blocking
+        />
+      </div>
 
-  
-    <div className="relative z-10"></div>
-    <AuthProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/dashboard/patient" element={<PatientDashboard />} />
-          <Route path="/dashboard/doctor" element={<DoctorDashboard />} />
-          <Route path="/dashboard/admin" element={<AdminDashboard />} />
-          <Route path="/profile" element={<Profile />} />
-        </Routes>
-      </Router>
-    </AuthProvider>
+      {/* 👇 App Content Layer on top */}
+      <div className="min-h-screen flex items-center justify-center ">
+        <div className="relative z-10">
+        <AuthProvider>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/dashboard/patient" element={<PatientDashboard />} />
+              <Route path="/dashboard/doctor" element={<DoctorDashboard />} />
+              <Route path="/dashboard/admin" element={<AdminDashboard />} />
+              <Route path="/profile" element={<Profile />} />
+            </Routes>
+          </Router>
+        </AuthProvider>
+      </div>
+      </div>
+      
+
     </div>
   );
 }

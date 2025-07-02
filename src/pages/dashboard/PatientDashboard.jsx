@@ -8,9 +8,9 @@ const PatientDashboard = () => {
   const { currentUser } = useAuth();
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
+    <div className="min-h-screen bg-gray-100 p-6 h-full w-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100">
           <Navbar />
-      <h1 className="text-2xl font-bold mb-4">Welcome, Patient</h1>
+      <h1 className="text-2xl font-bold mb-4"style={{marginTop: "80px", textAlign: "center", color: "#333"}}>Welcome, Patient</h1>
       <section className="bg-white p-4 rounded shadow mb-6">
         <h2 className="text-xl font-semibold mb-2">Book an Appointment</h2>
         <AppointmentForm userId={currentUser.uid} />

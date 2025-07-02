@@ -23,8 +23,8 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <form className="bg-white p-6 rounded shadow-md w-96" onSubmit={handleRegister}>
+    <div className="min-h-screen flex items-center justify-center">
+      <form className="bg-white p-6 rounded shadow-md w-96  bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100" onSubmit={handleRegister}>
         <h2 className="text-xl font-bold mb-4 text-center">Register</h2>
         <input type="email" placeholder="Email" className="w-full mb-3 p-2 border rounded"
           onChange={(e) => setEmail(e.target.value)} required />
