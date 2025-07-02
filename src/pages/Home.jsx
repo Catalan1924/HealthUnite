@@ -11,7 +11,7 @@ const Home = () => {
 return (
   <>
    
-    <div className="min-h-screen flex flex-col items-center justify-center  h-full w-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100">
+    <div className="min-h-screen flex flex-col items-center justify-center  bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100">
       <h1 className="text-4xl font-bold mb-4">Welcome to HealthUnite</h1>
       <p className="text-lg mb-8 text-center max-w-md">
         Your trusted healthcare appointment and medical partner.
